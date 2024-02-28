@@ -8,8 +8,8 @@
               <i class="nc-icon nc-chart text-warning"></i>
             </div>
             <div slot="content">
-              <p class="card-category">Capacity</p>
-              <h4 class="card-title">105GB</h4>
+              <p class="card-category">Citas</p>
+              <h4 class="card-title">0</h4>
             </div>
             <div slot="footer">
               <i class="fa fa-refresh"></i>Updated now
