@@ -21,7 +21,7 @@ import App from "./App.vue";
 import LightBootstrap from "./light-bootstrap-main";
 
 // router setup
-import routes from "./routes/routes";
+import routes from './routes/routes';
 
 import "./registerServiceWorker";
 // plugin setup
@@ -30,7 +30,7 @@ Vue.use(LightBootstrap);
 
 // configure router
 const router = new VueRouter({
-  routes, // short for routes: routes
+  routes,  // short for routes: routes
   linkActiveClass: "nav-item active",
   scrollBehavior: (to) => {
     if (to.hash) {

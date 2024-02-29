@@ -11,7 +11,7 @@ import Icons from 'src/pages/Icons.vue'
 import Maps from 'src/pages/Maps.vue'
 import Notifications from 'src/pages/Notifications.vue'
 
-const routes = [
+const admin = [
   {
     path: '/',
     component: DashboardLayout,
@@ -35,7 +35,7 @@ const routes = [
       {
         path: 'table-list',
         name: 'Table List',
-        component: TableList
+        component: null
       },
       {
         path: 'typography',
@@ -50,18 +50,68 @@ const routes = [
       {
         path: 'maps',
         name: 'Maps',
-        component: Maps
+        component: null
       },
       {
         path: 'notifications',
         name: 'Notifications',
-        component: Notifications
+        component: null
       },
     ]
   },
   { path: '*', component: NotFound }
 ]
 
+const user = [
+  {
+    path: '/',
+    component: DashboardLayout,
+    redirect: '/user/overview'
+  },
+  {
+    path: '/user',
+    component: DashboardLayout,
+    redirect: '/user/overview',
+    children: [
+      {
+        path: 'overview',
+        name: 'Overview',
+        component: Overview
+      },
+      {
+        path: 'user',
+        name: 'User',
+        component: UserProfile
+      },
+      {
+        path: 'table-list',
+        name: 'Table List',
+        component: null
+      },
+      {
+        path: 'typography',
+        name: 'Typography',
+        component: null
+      },
+      {
+        path: 'icons',
+        name: 'Icons',
+        component: null
+      },
+      {
+        path: 'maps',
+        name: 'Maps',
+        component: null
+      },
+      {
+        path: 'notifications',
+        name: 'Notifications',
+        component: null
+      },
+    ]
+  },
+  { path: '*', component: NotFound }
+]
 /**
  * Asynchronously load view (Webpack Lazy loading compatible)
  * The specified component must be inside the Views folder
@@ -71,4 +121,7 @@ function view(name) {
    return res;
 };**/
 
-export default routes
+
+export default user;
+
+

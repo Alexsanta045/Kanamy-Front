@@ -3,12 +3,12 @@
   "short_name": "vue-light-bootstrap-dashboard",
   "icons": [
     {
-      "src": "./img/icons/android-chrome-192x192.png",
+      "src": "./img/icons/Kanamy.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "./img/icons/android-chrome.png",
+      "src": "./img/icons/Kanamy.png",
       "sizes": "512x512",
       "type": "image/png"
     }

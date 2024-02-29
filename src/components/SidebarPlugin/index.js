@@ -1,7 +1,7 @@
 import Sidebar from './SideBar.vue'
 import SidebarLink from './SidebarLink.vue'
 
-const SidebarStore = {
+const SidebarAdmin = {
   showSidebar: false,
   sidebarLinks: [
     {
@@ -15,20 +15,35 @@ const SidebarStore = {
   }
 }
 
+const SidebarUser ={
+  showSidebar: false,
+  sidebarLinks: [
+    {
+      name: 'Dashboard',
+      icon: 'ti-panel',
+      path: '/User/overview'
+    }
+  ],
+  displaySidebar (value) {
+    this.showSidebar = value
+  }
+}
 const SidebarPlugin = {
 
   install (Vue) {
     Vue.mixin({
       data () {
         return {
-          sidebarStore: SidebarStore
+          sidebarAdmin: SidebarAdmin,
+          sidebarUser: SidebarUser
         }
       }
     })
 
     Object.defineProperty(Vue.prototype, '$sidebar', {
       get () {
-        return this.$root.sidebarStore
+        return this.$root.sidebarAdmin
+        return this.$root.sidebarUser
       }
     })
     Vue.component('side-bar', Sidebar)
