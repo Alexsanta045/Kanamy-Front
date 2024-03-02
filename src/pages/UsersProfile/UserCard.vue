@@ -3,14 +3,14 @@
     <img slot="image" src="https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400" alt="..."/>
     <div class="author">
       <a href="#">
-        <img class="avatar border-gray" src="img/faces/face-0.jpg" alt="..."/>
+        <img class="avatar border-gray" src="img/Kanamy.PNG" alt="..."/>
 
-        <h4 class="title">Mike Andrew<br />
-          <small>michael24</small>
+        <h4 class="title">Cliente<br />
+          <small>Cliente123</small>
         </h4>
       </a>
     </div>
-    <p class="description text-center"> "Soy un barbero <br>
+    <p class="description text-center"> "Soy un Cliente <br>
       el cual esta afiliado a <br>
       Kanamy"
     </p>

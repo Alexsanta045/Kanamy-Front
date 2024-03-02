@@ -1,127 +1,70 @@
 import DashboardLayout from '../layout/DashboardLayout.vue'
-// GeneralViews
+import UserDashboardLayout from '../layout/UserDashboardLayout.vue'
 import NotFound from '../pages/NotFoundPage.vue'
-
-// Admin pages
-import Overview from 'src/pages/Overview.vue'
+import UserOverview from 'src/pages/UserOverview.vue'
+import AdminOverview from 'src/pages/AdminOverview.vue'
 import UserProfile from 'src/pages/UserProfile.vue'
-import TableList from 'src/pages/TableList.vue'
-import Typography from 'src/pages/Typography.vue'
-import Icons from 'src/pages/Icons.vue'
-import Maps from 'src/pages/Maps.vue'
-import Notifications from 'src/pages/Notifications.vue'
+import AdminProfile from 'src/pages/AdminProfile.vue'
+import Login from 'src/pages/LoginView.vue'
 
-const admin = [
+const routes = [
+  // Nueva ruta para redirigir al inicio de sesión
   {
     path: '/',
-    component: DashboardLayout,
-    redirect: '/admin/overview'
+    redirect: '/login'
   },
+  // Rutas para el rol de admin
   {
     path: '/admin',
     component: DashboardLayout,
-    redirect: '/admin/overview',
     children: [
+      {
+        path: '/',
+        redirect: 'overview'
+      },
       {
         path: 'overview',
         name: 'Overview',
-        component: Overview
+        component: AdminOverview
       },
       {
         path: 'user',
         name: 'User',
-        component: UserProfile
+        component: AdminProfile
       },
-      {
-        path: 'table-list',
-        name: 'Table List',
-        component: null
-      },
-      {
-        path: 'typography',
-        name: 'Typography',
-        component: null
-      },
-      {
-        path: 'icons',
-        name: 'Icons',
-        component: null
-      },
-      {
-        path: 'maps',
-        name: 'Maps',
-        component: null
-      },
-      {
-        path: 'notifications',
-        name: 'Notifications',
-        component: null
-      },
+      // Resto de las rutas para admin
     ]
   },
-  { path: '*', component: NotFound }
-]
-
-const user = [
-  {
-    path: '/',
-    component: DashboardLayout,
-    redirect: '/user/overview'
-  },
+  // Rutas para el rol de usuario
   {
     path: '/user',
-    component: DashboardLayout,
-    redirect: '/user/overview',
+    component: UserDashboardLayout,
     children: [
+      {
+        path: '/',
+        redirect: 'overview'
+      },
       {
         path: 'overview',
         name: 'Overview',
-        component: Overview
+        component: UserOverview
       },
       {
         path: 'user',
         name: 'User',
         component: UserProfile
       },
-      {
-        path: 'table-list',
-        name: 'Table List',
-        component: null
-      },
-      {
-        path: 'typography',
-        name: 'Typography',
-        component: null
-      },
-      {
-        path: 'icons',
-        name: 'Icons',
-        component: null
-      },
-      {
-        path: 'maps',
-        name: 'Maps',
-        component: null
-      },
-      {
-        path: 'notifications',
-        name: 'Notifications',
-        component: null
-      },
+      // Resto de las rutas para usuario
     ]
   },
+  // Ruta para la página de inicio de sesión
+  {
+    path: '/login',
+    name: 'Login',
+    component: Login
+  },
+  // Ruta para página no encontrada
   { path: '*', component: NotFound }
 ]
-/**
- * Asynchronously load view (Webpack Lazy loading compatible)
- * The specified component must be inside the Views folder
- * @param  {string} name  the filename (basename) of the view to load.
-function view(name) {
-   var res= require('../components/Dashboard/Views/' + name + '.vue');
-   return res;
-};**/
 
-
-export default user;
-
-
+export default routes;

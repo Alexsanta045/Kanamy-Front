@@ -11,14 +11,6 @@
         <i class="nc-icon nc-circle-09"></i>
         <p>Perfil del usuario</p>
       </sidebar-link>
-      <sidebar-link to="/user/overview">
-        <i class="nc-icon nc-chart-pie-35"></i>
-        <p>Estadisticas</p>
-      </sidebar-link>
-      <sidebar-link to="/user/user">
-        <i class="nc-icon nc-circle-09"></i>
-        <p>Perfil del usuario</p>
-      </sidebar-link>
       <!-- <sidebar-link to="/admin/table-list">
         <i class="nc-icon nc-notes"></i>
         <p>Table list</p>

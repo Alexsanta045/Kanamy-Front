@@ -109,16 +109,16 @@
       return {
         user: {
           company: 'Kanamy',
-          username: 'Lucumi',
-          email: 'LucumiOcoro@gmail.com',
-          firstName: 'Lucumi',
-          lastName: 'Ocoro',
+          username: 'Cliente',
+          email: 'Cliente@gmail.com',
+          firstName: 'Cliente',
+          lastName: 'Cliente',
           address: 'Chocó, Colombia',
           city: 'Quibdó',
           country: 'Colombia',
           postalCode: '274057',
-          aboutMe: `Soy un barbero`
-        }
+          aboutMe: `Soy un Cliente`
+        } 
       }
     },
     methods: {
